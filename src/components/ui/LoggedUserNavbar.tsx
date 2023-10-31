@@ -302,4 +302,4 @@ const LoggedUserNavbar: FC = (): JSX.Element => {
     );
 };
 
-export default LoggedUserNavbar;
+export default LoggedUserNavbar ;

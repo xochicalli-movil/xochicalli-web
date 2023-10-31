@@ -26,5 +26,6 @@ const ProductSkeleton = () => {
             </VStack>
         </Stack>
     )
+    
 }
 export default ProductSkeleton

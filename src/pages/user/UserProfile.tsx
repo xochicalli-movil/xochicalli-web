@@ -163,4 +163,4 @@ const UserProfile: FC = (): JSX.Element => {
     )
 }
 
-export default UserProfile
+export default UserProfile 

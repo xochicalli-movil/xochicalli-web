@@ -1,0 +1,6 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { Box, Skeleton, SkeletonText, Stack, VStack } from "@chakra-ui/react";
+const ProductSkeleton = () => {
+    return (_jsxs(Stack, { direction: ['column', 'column', 'row'], gap: [4, 4, 8, 16], width: [350, 'md', '2xl', '4xl', '6xl'], height: '100%', children: [_jsx(Box, { width: [350, 'full', 350, 560], height: 500, bgColor: 'white', borderRadius: 'lg', objectFit: 'cover', boxShadow: 'base', children: _jsx(Skeleton, { width: [350, 'full', 350, 500], height: 500, borderRadius: 'lg' }) }), _jsxs(VStack, { height: '100%', width: '100%', justifyContent: 'space-between', boxShadow: 'base', py: 2, px: 6, borderRadius: 'lg', children: [_jsxs(Box, { width: 'full', my: 4, children: [_jsx(Skeleton, { width: 'full', height: 16 }), _jsx(Skeleton, { width: 75, height: 8, my: 4 }), _jsx(SkeletonText, { width: 'full', height: 8, my: 4, noOfLines: 5 }), _jsx(Skeleton, { mt: 4 })] }), _jsxs(Stack, { direction: ['row', 'row', 'column'], py: 4, alignItems: ['center', 'center', 'flex-start'], justifyContent: 'space-around', width: 'full', children: [_jsx(Box, { border: '1px solid', borderColor: 'gray.200', py: 2, px: 4, borderRadius: 'lg', children: _jsx(Skeleton, { width: 100, height: 50 }) }), _jsx(Skeleton, { width: 200, height: 50 })] })] })] }));
+};
+export default ProductSkeleton;

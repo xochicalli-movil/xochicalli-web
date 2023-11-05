@@ -1,0 +1,8 @@
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { lazy } from 'react';
+import { FormControl, FormLabel, Grid, GridItem, Input } from '@chakra-ui/react';
+const UserUpdateModal = lazy(() => import('./UserUpdateModal'));
+const UserPersonalData = ({ birthday, fatherSurname, motherSurname, name }) => {
+    return (_jsxs(_Fragment, { children: [_jsxs(Grid, { width: ['xs', 'sm', 'lg', 'xl'], p: 8, rounded: 'lg', bgColor: 'white', templateColumns: ['repeat(1, 1fr)', 'repeat(1, 1fr)', 'repeat(2, 1fr)', 'repeat(2, 1fr)'], gap: 6, children: [_jsx(GridItem, { children: _jsxs(FormControl, { children: [_jsx(FormLabel, { htmlFor: 'name', children: "Nombre(s)" }), _jsx(Input, { value: name, readOnly: true, cursor: 'default', bgColor: 'gray.50', borderColor: 'gray.200' })] }) }), _jsx(GridItem, { children: _jsxs(FormControl, { children: [_jsx(FormLabel, { htmlFor: 'fatherSurname', children: "Apellido paterno" }), _jsx(Input, { value: fatherSurname, readOnly: true, cursor: 'default', bgColor: 'gray.50', borderColor: 'gray.200' })] }) }), _jsx(GridItem, { children: _jsxs(FormControl, { children: [_jsx(FormLabel, { htmlFor: 'motherSurname', children: "Apellido materno" }), _jsx(Input, { value: motherSurname, readOnly: true, cursor: 'default', bgColor: 'gray.50', borderColor: 'gray.200' })] }) }), _jsx(GridItem, { children: _jsxs(FormControl, { children: [_jsx(FormLabel, { htmlFor: 'birthday', children: "Fecha de nacimiento" }), _jsx(Input, { value: birthday, readOnly: true, cursor: 'default', bgColor: 'gray.50', borderColor: 'gray.200' })] }) })] }), _jsx(UserUpdateModal, {})] }));
+};
+export default UserPersonalData;

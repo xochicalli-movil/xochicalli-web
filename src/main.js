@@ -1,0 +1,13 @@
+import { jsx as _jsx } from "react/jsx-runtime";
+import { StrictMode, Suspense } from "react";
+import { createRoot } from "react-dom/client";
+import { Box, ChakraProvider } from "@chakra-ui/react";
+import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import { App } from "@/App";
+import { UserProvider } from "@/context/auth";
+import { CartProvider } from "@/context/cart";
+import { ErrorBoundaryComponent, ErrorBoundary } from "@/components/errors";
+import { Spinner } from "@/components/loading";
+import "react-lazy-load-image-component/src/effects/blur.css";
+createRoot(document.getElementById("root")).render(_jsx(StrictMode, { children: _jsx(ChakraProvider, { children: _jsx(Suspense, { fallback: _jsx(Spinner, {}), children: _jsx(ErrorBoundary, { fallback: _jsx(ErrorBoundaryComponent, {}), children: _jsx(HelmetProvider, { children: _jsx(UserProvider, { children: _jsx(CartProvider, { children: _jsx(BrowserRouter, { children: _jsx(Box, { id: "principal", children: _jsx(App, {}) }) }) }) }) }) }) }) }) }));

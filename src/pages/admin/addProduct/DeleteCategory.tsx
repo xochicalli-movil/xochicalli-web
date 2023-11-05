@@ -84,4 +84,4 @@ const PopoverDeleteCategory = ({ category }: { category: string }) => {
   );
 };
 
-export default PopoverDeleteCategory;
+export default PopoverDeleteCategory ;

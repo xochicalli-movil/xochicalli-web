@@ -428,4 +428,4 @@ const AddProduct: FC = (): JSX.Element => {
   );
 };
 
-export default AddProduct;
+export default AddProduct ;

@@ -177,5 +177,5 @@ export const Navbar: FC = (): JSX.Element => {
                 </Flex>
             }
         </>
-    );
+    ) ;
 } ;

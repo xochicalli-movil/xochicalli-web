@@ -65,7 +65,7 @@ const Product = () => {
                 status: "error",
                 duration: 1500,
                 isClosable: false,
-                title: "Añadir comentario",
+                title: "Añadir un comentario",
                 position: isLargerThan800 ? "bottom" : "top-right",
                 description: message,
             });

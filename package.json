@@ -9,10 +9,12 @@
     "build": "vite build",
     "lint": "eslint --max-warnings=0 src",
     "preview": "vite preview",
-    "test": "vitest",
+    "test": "jest",
     "coverage": "vitest run --coverage",
     "prebuild": "npm run test -- --passWithNoTests",
-    "buildandtest": "npm run build && jest"
+    "buildandtest": "npm run build && jest",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
@@ -20,7 +22,9 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@hookform/resolvers": "^2.9.11",
+    "aria-query": "^5.3.0",
     "axios": "^1.4.0",
+    "enzyme-adapter-react-16": "^1.15.7",
     "firebase": "^9.23.0",
     "framer-motion": "^9.0.2",
     "notistack": "^3.0.1",
@@ -43,6 +47,8 @@
     "yup": "^1.0.2"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-react": "^7.23.3",
     "@testing-library/react": "^14.0.0",
     "@types/payment": "^2.1.5",
     "@types/react": "^18.0.27",
@@ -51,9 +57,12 @@
     "@types/react-tagsinput": "^3.20.0",
     "@types/uuid": "^9.0.1",
     "@vitejs/plugin-react-swc": "^3.0.0",
+    "babel-jest": "^29.7.0",
+    "cypress": "^13.5.0",
     "eslint": "^8.34.0",
     "eslint-config-react-app": "^7.0.1",
     "happy-dom": "^8.9.0",
+    "jest": "^26.6.0",
     "standard": "^17.0.0",
     "typescript": "^4.9.3",
     "vite": "^4.4.2",

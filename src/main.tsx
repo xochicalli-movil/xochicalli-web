@@ -20,6 +20,14 @@ function TestError() {
   return a.hello();
 }
 
+const deployData = {
+  environment: 'production',
+  revision: process.env.GITHUB_SHA,
+};
+
+rollbar.configure({ payload: { deploy: deployData } });	
+
+
 createRoot(document.getElementById("root") as HTMLElement).render(
   <StrictMode>
     <ChakraProvider>

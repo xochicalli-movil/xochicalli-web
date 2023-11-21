@@ -39,4 +39,20 @@ jobs:
       - name: Ejecutar pruebas Cypress
         run: yarn cypress run
 
-        
+  deploy:
+    runs-on: ubuntu-latest
+    needs: cypress
+
+    steps:
+      - name: Notify Rollbar of Deployment
+        run: |
+          curl https://api.rollbar.com/api/1/deploy/ \
+            -F access_token=$ROLLBAR_ACCESS_TOKEN \
+            -F environment=$ROLLBAR_ENVIRONMENT \
+            -F revision=$ROLLBAR_REVISION \
+            -F local_username="$GITHUB_ACTOR" \
+            -F comment="Despliegue realizado por: $GITHUB_ACTOR"
+        env:
+          ROLLBAR_ACCESS_TOKEN: ${{ secrets.ROLLBAR_ACCESS_TOKEN }}
+          ROLLBAR_ENVIRONMENT: production
+          ROLLBAR_REVISION: ${{ github.sha }}

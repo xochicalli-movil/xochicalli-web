@@ -15,8 +15,8 @@
     "buildandtest": "npm run build && jest",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "rollbar": "rollbar"
-    
+    "rollbar": "rollbar",
+    "deploy":"ROLLBAR_ACCESS_TOKEN=1d88de51167544d1957c05dc46c79a18 ROLLBAR_ENVIRONMENT=production ROLLBAR_REVISION=$npm_package_gitHead rollbar deploy"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",

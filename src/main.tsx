@@ -22,7 +22,11 @@ const deployData = {
 
 function TestError() {
   const a = null;
-  return a.hello();
+  try {
+    return a.hello();
+  } catch (error) {
+    console.error('Ocurrió un error:', error);
+  }
 }
 
 rollbar.configure({ payload: { deploy: deployData } });
@@ -33,19 +37,19 @@ createRoot(document.getElementById("root") as HTMLElement).render(
     <ChakraProvider>
       <Suspense fallback={<Spinner />}>
         <ErrorBoundary fallback={<ErrorBoundaryComponent />}>
-        <TestError />
-          <HelmetProvider>
-            <UserProvider>
-              <CartProvider>
-                <BrowserRouter>
-                  <Box id=" principal ">
-                    <App />
-                  </Box>
-                </BrowserRouter>
-              </CartProvider>
-            </UserProvider>
-          </HelmetProvider>
+          <TestError />
         </ErrorBoundary>
+        <HelmetProvider>
+          <UserProvider>
+            <CartProvider>
+              <BrowserRouter>
+                <Box id=" principal ">
+                  <App />
+                </Box>
+              </BrowserRouter>
+            </CartProvider>
+          </UserProvider>
+        </HelmetProvider>
       </Suspense>
     </ChakraProvider>
   </StrictMode>

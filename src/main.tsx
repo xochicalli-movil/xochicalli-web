@@ -22,7 +22,7 @@ const deployData = {
 function TestError() {
   const a: any = null;
   try {
-    return a.hello();
+    return a.hello() ;
   } catch (error) {
     console.error('Ocurrió un error:', error);
     // Puedes enviar el error a Rollbar aquí si es necesario

@@ -19,13 +19,14 @@ const deployData = {
   environment: 'production',
   revision: process.env.GITHUB_SHA,
 };
-
 function TestError() {
-  const a = null;
+  const a: any = null;
   try {
     return a.hello();
   } catch (error) {
     console.error('Ocurrió un error:', error);
+    // Puedes enviar el error a Rollbar aquí si es necesario
+    rollbar.error(error);
   }
 }
 

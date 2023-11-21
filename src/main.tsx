@@ -38,7 +38,7 @@ createRoot(document.getElementById("root") as HTMLElement).render(
             <UserProvider>
               <CartProvider>
                 <BrowserRouter>
-                  <Box id="principal">
+                  <Box id=" principal ">
                     <App />
                   </Box>
                 </BrowserRouter>

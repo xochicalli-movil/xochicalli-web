@@ -14,7 +14,9 @@
     "prebuild": "npm run test -- --passWithNoTests",
     "buildandtest": "npm run build && jest",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "rollbar": "rollbar"
+    
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.0.19",
@@ -22,6 +24,7 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@hookform/resolvers": "^2.9.11",
+    "@rollbar/react": "^0.11.2",
     "aria-query": "^5.3.0",
     "axios": "^1.4.0",
     "enzyme-adapter-react-16": "^1.15.7",
@@ -42,6 +45,7 @@
     "react-tagsinput": "^3.20.3",
     "reactjs-credit-card": "^1.0.6",
     "recharts": "^2.4.3",
+    "rollbar": "^2.26.2",
     "serve": "^14.2.1",
     "uuid": "^9.0.0",
     "yup": "^1.0.2"

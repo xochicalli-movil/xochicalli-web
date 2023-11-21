@@ -14,18 +14,18 @@ import { Spinner } from "@/components/loading";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 rollbar.log('La aplicación se está iniciando.');
+// Configurar datos de despliegue
+const deployData = {
+  environment: 'production',
+  revision: process.env.GITHUB_SHA,
+};
 
 function TestError() {
   const a = null;
   return a.hello();
 }
 
-const deployData = {
-  environment: 'production',
-  revision: process.env.GITHUB_SHA,
-};
-
-rollbar.configure({ payload: { deploy: deployData } });	
+rollbar.configure({ payload: { deploy: deployData } });
 
 
 createRoot(document.getElementById("root") as HTMLElement).render(

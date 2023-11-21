@@ -1,4 +1,4 @@
-name: Build and Test
+name: Build, Test, and Deploy
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: 14.x # o la versión que necesites
+          node-version: 14.x
 
       - name: Install dependencies
         run: npm install
@@ -26,7 +26,6 @@ jobs:
 
   cypress:
     runs-on: ubuntu-latest
-
     needs: build
 
     steps:
